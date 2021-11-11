@@ -170,7 +170,6 @@ const Navbar = (props) => {
 								) : (
 									<NavBtnLink to="/sign-up">
 										<Button
-											onClick={closeMobileMenu}
 											fontBig
 											primary
                                             onClick={sendToSignUp}
@@ -189,7 +188,6 @@ const Navbar = (props) => {
 								) : (
 									<NavBtnLink to="/sign-in">
 										<Button
-											onClick={closeMobileMenu}
 											fontBig
 											primary
                                             onClick={data ? handleLogOut : sendToSignIn}
