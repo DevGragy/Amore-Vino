@@ -12,7 +12,7 @@ import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
-		margin: '120px',
+		margin: '60px',
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
