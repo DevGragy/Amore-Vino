@@ -45,16 +45,6 @@ const Navbar = (props) => {
 			});
 	};
 
-	const sendToSignIn = (e) => {
-		e.preventDefault();
-		props.history.push("/sign-in");
-	};
-
-	const sendToSignUp = (e) => {
-		e.preventDefault();
-		props.history.push("/sign-up");
-	};
-
 	useEffect(() => {
 		showButton();
 	}, []);
@@ -172,7 +162,7 @@ const Navbar = (props) => {
 										<Button
 											fontBig
 											primary
-                                            onClick={sendToSignUp}
+                                            onClick={closeMobileMenu}
 										>
 											{data ? `${data.email}` : 'Registrate'}
 										</Button>
@@ -190,7 +180,7 @@ const Navbar = (props) => {
 										<Button
 											fontBig
 											primary
-                                            onClick={data ? handleLogOut : sendToSignIn}
+                                            onClick={data ? handleLogOut : closeMobileMenu}
 										>
 											{data ? 'Logout' : 'Inicia'}
 										</Button>
