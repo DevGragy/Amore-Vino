@@ -69,7 +69,7 @@ const FormInicia = () => {
 			if (password) {
 				axios
 					.post(
-						"https://smlogin.herokuapp.com/signin",
+						"https://smlogin.herokuapp.com/sign-in",
 						{
 							email: email,
 							password: password,

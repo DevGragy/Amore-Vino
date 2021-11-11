@@ -73,7 +73,7 @@ const FormRegistra = () => {
 			if (validatePassword(password)) {
 				axios
 					.post(
-						"https://smlogin.herokuapp.com/signup",
+						"https://smlogin.herokuapp.com/sign-up",
 						{
 							email: email,
 							password: password,
