@@ -51,11 +51,7 @@ const Navbar = (props) => {
 
 	useEffect(() => {
 		axios
-			.get("https://smlogin.herokuapp.com/sign-in", 
-                {
-                    email: email,
-                    password: password,
-                },
+			.get("https://smlogin.herokuapp.com/user", 
                 { withCredentials: true }
 			)
 			.then((response) => {
