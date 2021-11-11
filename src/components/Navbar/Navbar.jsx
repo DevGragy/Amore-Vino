@@ -155,7 +155,7 @@ const Navbar = (props) => {
 							<NavItemBtn>
 								{button ? (
 									<NavBtnLink to="/sign-up">
-										<Button primary>Registrate</Button>
+										<Button primary>{data ? `${data.email}` : 'Registrate'}</Button>
 									</NavBtnLink>
 								) : (
 									<NavBtnLink to="/sign-up">
@@ -173,7 +173,12 @@ const Navbar = (props) => {
 							<NavItemBtn>
 								{button ? (
 									<NavBtnLink to="/sign-in">
-										<Button primary>Inicia</Button>
+										<Button 
+                                            primary
+                                            onClick={data ? handleLogOut : null}
+                                        >
+                                            {data ? 'Logout' : 'Inicia'}
+                                        </Button>
 									</NavBtnLink>
 								) : (
 									<NavBtnLink to="/sign-in">
