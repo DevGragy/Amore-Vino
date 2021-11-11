@@ -3,8 +3,7 @@ import { Button } from '../../globalStyles';
 import {
     FaFacebook,
     FaInstagram,
-    FaTwitter,
-    FaLinkedin
+    FaTwitter
 } from 'react-icons/fa';
 import {
     FooterContainer,
