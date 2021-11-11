@@ -1,144 +1,210 @@
-import React, { useState,  useEffect } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
-import { IconContext } from 'react-icons/lib'
-import { Button } from '../../globalStyles'
-import { 
-    Nav, 
-    NavbarContainer, 
-    NavLogo, 
-    NavIcon, 
-    MobileIcon,
-    NavMenu,
-    NavItem,
-    NavLinks,
-    NavItemBtn,
-    NavBtnLink
-} from './Navbar.elements'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { IconContext } from "react-icons/lib";
+import { Button } from "../../globalStyles";
+import {
+	Nav,
+	NavbarContainer,
+	NavLogo,
+	NavIcon,
+	MobileIcon,
+	NavMenu,
+	NavItem,
+	NavLinks,
+	NavItemBtn,
+	NavBtnLink,
+} from "./Navbar.elements";
 
-const Navbar = () => {
-    const [click, setClick] = useState(false)
-    const [button, setButton] = useState(true)
+const Navbar = (props) => {
+	const [click, setClick] = useState(false);
+	const [button, setButton] = useState(true);
+	const [data, setData] = useState(null);
 
-    const handleClick = () => setClick(!click)
-    const closeMobileMenu = () => setClick(false)
+	const handleClick = () => setClick(!click);
+	const closeMobileMenu = () => setClick(false);
 
-    const showButton = () => {
-        if(window.innerWidth <= 960) {
-            setButton(false)
-        } else {
-            setButton(true)
-        }
-    }
+	const showButton = () => {
+		if (window.innerWidth <= 960) {
+			setButton(false);
+		} else {
+			setButton(true);
+		}
+	};
 
-    useEffect(() => {
-        showButton();
-    }, [])
+	const handleLogOut = (e) => {
+		e.preventDefault();
+		axios
+			.get("https://smlogin.herokuapp.com/logout", {
+				withCredentials: true,
+			})
+			.then((response) => {
+				console.log(response.data);
+				setData(null);
+				window.location.reload();
+			});
+	};
 
-    window.addEventListener('resize',  showButton)
+	const sendToSignIn = (e) => {
+		e.preventDefault();
+		props.history.push("/sign-in");
+	};
 
-    return (
-        <>
-            <IconContext.Provider value={{ color: '#fff' }}>
-                <Nav>
-                    <NavbarContainer>
-                        <NavLogo to='/' onClick={closeMobileMenu}>
-                            <NavIcon/>
-                        </NavLogo>
+	const sendToSignUp = (e) => {
+		e.preventDefault();
+		props.history.push("/sign-up");
+	};
 
-                        <MobileIcon onClick={handleClick} >
-                            {click ? <FaTimes/> : <FaBars/>}
-                        </MobileIcon>
+	useEffect(() => {
+		showButton();
+	}, []);
 
-                        <NavMenu onClick={handleClick} click={click} >
-                            
-                            <NavItem>
-                                <NavLinks to='/especiales' onClick={closeMobileMenu}>
-                                    Especiales
-                                </NavLinks>
-                            </NavItem>
+	useEffect(() => {
+		axios
+			.get("https://smlogin.herokuapp.com/user", {
+				withCredentials: true,
+			})
+			.then((response) => {
+				if (response.data) {
+					setData(response.data);
+				}
+			});
+	}, [setData]);
 
-                            <NavItem>
-                                <NavLinks to='/club' onClick={closeMobileMenu}>
-                                    Club
-                                </NavLinks>
-                            </NavItem>
+	window.addEventListener("resize", showButton);
 
-                            <NavItem>
-                                <NavLinks to='/destilados' onClick={closeMobileMenu}>
-                                    Destilados
-                                </NavLinks>
-                            </NavItem>
+	return (
+		<>
+			<IconContext.Provider value={{ color: "#fff" }}>
+				<Nav>
+					<NavbarContainer>
+						<NavLogo to="/" onClick={closeMobileMenu}>
+							<NavIcon />
+						</NavLogo>
 
-                            <NavItem>
-                                <NavLinks to='/gourmet' onClick={closeMobileMenu}>
-                                    Gourmet
-                                </NavLinks>
-                            </NavItem>
+						<MobileIcon onClick={handleClick}>
+							{click ? <FaTimes /> : <FaBars />}
+						</MobileIcon>
 
-                            <NavItem>
-                                <NavLinks to='/accesorios' onClick={closeMobileMenu}>
-                                    Accesorios
-                                </NavLinks>
-                            </NavItem>
+						<NavMenu onClick={handleClick} click={click}>
+							<NavItem>
+								<NavLinks
+									to="/especiales"
+									onClick={closeMobileMenu}
+								>
+									Especiales
+								</NavLinks>
+							</NavItem>
 
-                            <NavItem>
-                                <NavLinks to='/ofertas' onClick={closeMobileMenu}>
-                                    Ofertas
-                                </NavLinks>
-                            </NavItem>
+							<NavItem>
+								<NavLinks to="/club" onClick={closeMobileMenu}>
+									Club
+								</NavLinks>
+							</NavItem>
 
-                            <NavItem>
-                                <NavLinks to='/blog' onClick={closeMobileMenu}>
-                                    Blog
-                                </NavLinks>
-                            </NavItem>
+							<NavItem>
+								<NavLinks
+									to="/destilados"
+									onClick={closeMobileMenu}
+								>
+									Destilados
+								</NavLinks>
+							</NavItem>
 
-                            <NavItemBtn>
-                                {button ? (
-                                    <NavBtnLink to='/sign-up'>
-                                        <Button primary>Registrate</Button>
-                                    </NavBtnLink> 
-                                      
-                                ) : (
-                                    <NavBtnLink to='/sign-up'>
-                                        <Button onClick={closeMobileMenu} fontBig primary>Registrate</Button>
-                                    </NavBtnLink>   
-                                )}
-                            </NavItemBtn>
+							<NavItem>
+								<NavLinks
+									to="/gourmet"
+									onClick={closeMobileMenu}
+								>
+									Gourmet
+								</NavLinks>
+							</NavItem>
 
-                            <NavItemBtn>
-                                {button ? (
-                                    <NavBtnLink to='/sign-in'>
-                                        <Button primary>Inicia</Button>
-                                    </NavBtnLink> 
-                                      
-                                ) : (
-                                    <NavBtnLink to='/sign-in'>
-                                        <Button onClick={closeMobileMenu} fontBig primary>Inicia</Button>
-                                    </NavBtnLink>   
-                                )}
-                            </NavItemBtn>
+							<NavItem>
+								<NavLinks
+									to="/accesorios"
+									onClick={closeMobileMenu}
+								>
+									Accesorios
+								</NavLinks>
+							</NavItem>
 
-                            <NavItemBtn>
-                                {button ? (
-                                    <NavBtnLink to='/carrito'>
-                                        <Button primary>Carrito</Button>
-                                    </NavBtnLink> 
-                                      
-                                ) : (
-                                    <NavBtnLink to='/carrito'>
-                                        <Button onClick={closeMobileMenu} fontBig primary>Carrito</Button>
-                                    </NavBtnLink>   
-                                )}
-                            </NavItemBtn>
+							<NavItem>
+								<NavLinks
+									to="/ofertas"
+									onClick={closeMobileMenu}
+								>
+									Ofertas
+								</NavLinks>
+							</NavItem>
 
-                        </NavMenu>
+							<NavItem>
+								<NavLinks to="/blog" onClick={closeMobileMenu}>
+									Blog
+								</NavLinks>
+							</NavItem>
 
-                    </NavbarContainer>
-                </Nav>
-            </IconContext.Provider>
-        </>
-    )
-}
+							<NavItemBtn>
+								{button ? (
+									<NavBtnLink to="/carrito">
+										<Button primary>Carrito</Button>
+									</NavBtnLink>
+								) : (
+									<NavBtnLink to="/carrito">
+										<Button
+											onClick={closeMobileMenu}
+											fontBig
+											primary
+										>
+											Carrito
+										</Button>
+									</NavBtnLink>
+								)}
+							</NavItemBtn>
+
+							<NavItemBtn>
+								{button ? (
+									<NavBtnLink to="/sign-up">
+										<Button primary>Registrate</Button>
+									</NavBtnLink>
+								) : (
+									<NavBtnLink to="/sign-up">
+										<Button
+											onClick={closeMobileMenu}
+											fontBig
+											primary
+                                            onClick={sendToSignUp}
+										>
+											{data ? `${data.email}` : 'Registrate'}
+										</Button>
+									</NavBtnLink>
+								)}
+							</NavItemBtn>
+
+							<NavItemBtn>
+								{button ? (
+									<NavBtnLink to="/sign-in">
+										<Button primary>Inicia</Button>
+									</NavBtnLink>
+								) : (
+									<NavBtnLink to="/sign-in">
+										<Button
+											onClick={closeMobileMenu}
+											fontBig
+											primary
+                                            onClick={data ? handleLogOut : sendToSignIn}
+										>
+											{data ? 'Logout' : 'Inicia'}
+										</Button>
+									</NavBtnLink>
+								)}
+							</NavItemBtn>
+						</NavMenu>
+					</NavbarContainer>
+				</Nav>
+			</IconContext.Provider>
+		</>
+	);
+};
 
 export default Navbar;
