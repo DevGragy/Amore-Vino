@@ -154,11 +154,11 @@ const Navbar = (props) => {
 
 							<NavItemBtn>
 								{button ? (
-									<NavBtnLink to="/sign-up">
+									<NavBtnLink to={data ? '/' : '/sign-up'}>
 										<Button primary>{data ? `${data.email}` : 'Registrate'}</Button>
 									</NavBtnLink>
 								) : (
-									<NavBtnLink to="/sign-up">
+									<NavBtnLink to={data ? '/' : '/sign-up'}>
 										<Button
 											fontBig
 											primary
