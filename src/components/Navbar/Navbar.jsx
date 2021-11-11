@@ -57,7 +57,6 @@ const Navbar = (props) => {
 			.then((response) => {
 				if (response.data) {
 					setData(response.data);
-                    window.location.reload();
 				}
 			});
 	}, [setData]);
