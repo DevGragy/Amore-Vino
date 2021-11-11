@@ -57,6 +57,7 @@ const Navbar = (props) => {
 			.then((response) => {
 				if (response.data) {
 					setData(response.data);
+                    window.location.reload();
 				}
 			});
 	}, [setData]);
@@ -172,7 +173,7 @@ const Navbar = (props) => {
 
 							<NavItemBtn>
 								{button ? (
-									<NavBtnLink to="/sign-in">
+									<NavBtnLink to={data ? '/' : '/sign-in'}>
 										<Button 
                                             primary
                                             onClick={data ? handleLogOut : null}
@@ -181,7 +182,7 @@ const Navbar = (props) => {
                                         </Button>
 									</NavBtnLink>
 								) : (
-									<NavBtnLink to="/sign-in">
+									<NavBtnLink to={data ? '/' : '/sign-in'}>
 										<Button
 											fontBig
 											primary
