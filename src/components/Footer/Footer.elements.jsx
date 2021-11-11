@@ -3,7 +3,7 @@ import { FaWineGlassAlt } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.div`
-    background-color: #101522;
+    background-color: #3B1630;
     padding: 4rem 0 2rem 0;
     display: flex;
     flex-direction: column;
@@ -108,7 +108,7 @@ export const FooterLink = styled(Link)`
     margin-bottom: 0.5rem;
 
     &:hover {
-        color: #0467fb;
+        color: #D4AF37;
         transition: 0.3s ease-out;
     }
 `;

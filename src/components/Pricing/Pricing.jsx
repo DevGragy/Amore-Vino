@@ -19,7 +19,7 @@ import {
 
 const Pricing = () => {
     return (
-        <IconContext.Provider value={{ color: '#a9b3c1', size: 64 }}>
+        <IconContext.Provider value={{ color: '#FFF', size: 64 }}>
             <PricingSection>
                 <PricingWrapper>
                     <PricingHeading>Tipos de Membresia</PricingHeading>
@@ -29,7 +29,7 @@ const Pricing = () => {
                                 <PricingCardIcon>
                                 <ImStarEmpty />
                                 </PricingCardIcon>
-                                <PricingCardPlan>Bronce</PricingCardPlan>
+                                <PricingCardPlan>Oro</PricingCardPlan>
                                 <PricingCardCost>$10,000</PricingCardCost>
                                 <PricingCardLength>por año</PricingCardLength>
                                 <PricingCardFeatures>
@@ -45,7 +45,7 @@ const Pricing = () => {
                                 <PricingCardIcon>
                                 <ImStarHalf />
                                 </PricingCardIcon>
-                                <PricingCardPlan>Plata</PricingCardPlan>
+                                <PricingCardPlan>Platino</PricingCardPlan>
                                 <PricingCardCost>$20,000</PricingCardCost>
                                 <PricingCardLength>por año</PricingCardLength>
                                 <PricingCardFeatures>
@@ -62,7 +62,7 @@ const Pricing = () => {
                                 <PricingCardIcon>
                                 <ImStarFull />
                                 </PricingCardIcon>
-                                <PricingCardPlan>Oro</PricingCardPlan>
+                                <PricingCardPlan>Diamante</PricingCardPlan>
                                 <PricingCardCost>$45,000</PricingCardCost>
                                 <PricingCardLength>por año</PricingCardLength>
                                 <PricingCardFeatures>

@@ -43,7 +43,6 @@ const Navbar = () => {
                     <NavbarContainer>
                         <NavLogo to='/' onClick={closeMobileMenu}>
                             <NavIcon/>
-                            AMORE
                         </NavLogo>
 
                         <MobileIcon onClick={handleClick} >
@@ -51,6 +50,7 @@ const Navbar = () => {
                         </MobileIcon>
 
                         <NavMenu onClick={handleClick} click={click} >
+                            
                             <NavItem>
                                 <NavLinks to='/especiales' onClick={closeMobileMenu}>
                                     Especiales
@@ -95,12 +95,39 @@ const Navbar = () => {
 
                             <NavItemBtn>
                                 {button ? (
-                                    <NavBtnLink to='/registrate'>
+                                    <NavBtnLink to='/sign-up'>
                                         <Button primary>Registrate</Button>
-                                    </NavBtnLink>   
+                                    </NavBtnLink> 
+                                      
                                 ) : (
-                                    <NavBtnLink to='/registrate'>
+                                    <NavBtnLink to='/sign-up'>
                                         <Button onClick={closeMobileMenu} fontBig primary>Registrate</Button>
+                                    </NavBtnLink>   
+                                )}
+                            </NavItemBtn>
+
+                            <NavItemBtn>
+                                {button ? (
+                                    <NavBtnLink to='/sign-in'>
+                                        <Button primary>Inicia</Button>
+                                    </NavBtnLink> 
+                                      
+                                ) : (
+                                    <NavBtnLink to='/sign-in'>
+                                        <Button onClick={closeMobileMenu} fontBig primary>Inicia</Button>
+                                    </NavBtnLink>   
+                                )}
+                            </NavItemBtn>
+
+                            <NavItemBtn>
+                                {button ? (
+                                    <NavBtnLink to='/carrito'>
+                                        <Button primary>Carrito</Button>
+                                    </NavBtnLink> 
+                                      
+                                ) : (
+                                    <NavBtnLink to='/carrito'>
+                                        <Button onClick={closeMobileMenu} fontBig primary>Carrito</Button>
                                     </NavBtnLink>   
                                 )}
                             </NavItemBtn>

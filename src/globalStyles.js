@@ -26,7 +26,7 @@ export const Container = styled.div`
 
 export const Button = styled.button`
     border-radius: 4px;
-    background: ${({ primary }) => (primary ? '#ef233c' : '#ef233c')};
+    background: ${({ primary }) => (primary ? '#DBBC57' : '#DBBC57')};
     white-space: nowrap;
     padding: ${({ big }) => (big ? '12px 64px' : '10px 20px') };
     color: #fff;
@@ -38,7 +38,7 @@ export const Button = styled.button`
     &:hover {
         transition: all 0.3s ease-out;
         background: #fff;
-        background: ${({ primary }) => (primary ? '#d90429' : '#d90429') };
+        background: ${({ primary }) => (primary ? '#D4AF37' : '#D4AF37') };
     }
 
     @media screen and (max-width: 960px) {

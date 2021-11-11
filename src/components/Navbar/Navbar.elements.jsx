@@ -6,7 +6,7 @@ import { Container } from '../../globalStyles'
 
 
 export const Nav = styled.nav`
-    background: #101522;
+    background: #3B1630;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@ export const Nav = styled.nav`
 
 export const NavbarContainer = styled(Container)`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     height: 80px;
 
     ${Container}
@@ -69,7 +69,7 @@ export const NavMenu = styled.ul`
         left: ${({click}) => (click ? 0 : '-100%') };
         opacity: 1;
         transition: all 0.5s ease;
-        background: #101522;
+        background: #3B1630;
     }
 `
 
@@ -78,7 +78,7 @@ export const NavItem = styled.li`
     border-bottom: 2px solid transparent;
 
     &:hover {
-        border-bottom: 2px solid #ef233c;
+        border-bottom: 2px solid #D4AF37;
     }
 
     @media screen and (max-width: 960px) {
@@ -105,7 +105,7 @@ export const NavLinks = styled(Link)`
         display: table;
 
         &:hover {
-            color: #ef233c;
+            color: #D4AF37;
             transition: all 0.3s ease;
         }
     }
