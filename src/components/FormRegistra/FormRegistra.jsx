@@ -36,8 +36,9 @@ const useStyles = makeStyles((theme) => ({
 		color: "black",
 	},
 	info: {
-		fontSize: 11,
+		fontSize: 14,
 		color: "#999",
+		textAlign: 'justify',
 	},
 }));
 
