@@ -51,16 +51,6 @@ const Shop = () => {
     return (
 
         <>
-            <div>
-                <ul>
-                    {cart.map(x => {
-                        <li key={x.name}>
-                            {x.name}
-                            <span> {x.cantidad} </span>
-                        </li>
-                    })}
-                </ul>
-            </div>
             <Productos
                 addToCart={ addToCart } 
                 products={ products }   
