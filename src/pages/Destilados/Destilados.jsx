@@ -1,6 +1,6 @@
 import React from 'react'
 import { InfoSection, MoreInfo } from '../../components'
-import { destilados, infoDataOne, mainDataOne, mainDataTwo } from '../../data/Data'
+import { destilados, infoDataOne, mainDataOne } from '../../data/Data'
 
 const Destilados = () => {
     return (
