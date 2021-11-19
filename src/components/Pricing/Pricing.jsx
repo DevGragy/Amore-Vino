@@ -24,7 +24,7 @@ const Pricing = () => {
                 <PricingWrapper>
                     <PricingHeading>Tipos de Membresia</PricingHeading>
                     <PricingContainer>
-                        <PricingCard to='/carrito'>
+                        <PricingCard to='/tienda'>
                             <PricingCardInfo>
                                 <PricingCardIcon>
                                 <ImStarEmpty />
@@ -40,7 +40,7 @@ const Pricing = () => {
                                 <Button primary>Elige un plan</Button>
                             </PricingCardInfo>
                         </PricingCard>
-                        <PricingCard to='/carrito'>
+                        <PricingCard to='/tienda'>
                             <PricingCardInfo>
                                 <PricingCardIcon>
                                 <ImStarHalf />
@@ -57,7 +57,7 @@ const Pricing = () => {
                                 <Button primary>Elige un plan</Button>
                             </PricingCardInfo>
                         </PricingCard>
-                        <PricingCard to='/carrito'>
+                        <PricingCard to='/tienda'>
                             <PricingCardInfo>
                                 <PricingCardIcon>
                                 <ImStarFull />
