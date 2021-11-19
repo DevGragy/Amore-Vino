@@ -14,9 +14,13 @@ import {
 	NavLinks,
 	NavItemBtn,
 	NavBtnLink,
+	NavIconShop,
+	NavItemCart,
+	Bubble,
 } from "./Navbar.elements";
+import BubbleAlert from "../BubbleAlert/BubbleAlert";
 
-const Navbar = (props) => {
+const Navbar = () => {
 	const [click, setClick] = useState(false);
 	const [button, setButton] = useState(true);
 	const [data, setData] = useState(null);
@@ -45,10 +49,12 @@ const Navbar = (props) => {
 			});
 	};
 
+
 	useEffect(() => {
 		showButton();
 	}, []);
 
+	
 	useEffect(() => {
 		axios
 			.get("https://smlogin.herokuapp.com/user", 
@@ -60,6 +66,7 @@ const Navbar = (props) => {
 				}
 			});
 	}, [setData]);
+	
 
 	window.addEventListener("resize", showButton);
 
@@ -134,23 +141,18 @@ const Navbar = (props) => {
 								</NavLinks>
 							</NavItem>
 
-							<NavItemBtn>
-								{button ? (
-									<NavBtnLink to="/carrito">
-										<Button primary>Carrito</Button>
-									</NavBtnLink>
-								) : (
-									<NavBtnLink to="/carrito">
-										<Button
-											onClick={closeMobileMenu}
-											fontBig
-											primary
-										>
-											Carrito
-										</Button>
-									</NavBtnLink>
-								)}
-							</NavItemBtn>
+							<NavItem>
+								<NavLinks to="/tienda" onClick={closeMobileMenu}>
+									Tienda
+								</NavLinks>
+							</NavItem>
+
+							<NavItemCart>
+								<Bubble>
+									<BubbleAlert value={ 10 } />
+								</Bubble>
+								<NavIconShop/>
+							</NavItemCart>
 
 							<NavItemBtn>
 								{button ? (

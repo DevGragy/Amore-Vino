@@ -1,11 +1,11 @@
 import React from 'react'
-import { InfoSection } from '../../components'
-import { vinosGourmet } from '../../data/Data'
+import { InfoSection, MoreInfo } from '../../components'
+import { mainDataTwo, vinosGourmet } from '../../data/Data'
 
 const Gourmet = () => {
     return (
         <>
-            <InfoSection {...vinosGourmet}/>
+            <InfoSection {...vinosGourmet}/>            <MoreInfo {...mainDataTwo} />
         </>
     )
 }

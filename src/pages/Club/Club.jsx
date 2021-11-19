@@ -1,11 +1,12 @@
 import React from 'react'
-import { InfoSection } from '../../components'
-import { clubVinos } from '../../data/Data'
+import { InfoSection, MoreInfo } from '../../components'
+import { clubVinos, mainDataOne } from '../../data/Data'
 
 const Club = () => {
     return (
         <>
             <InfoSection {...clubVinos}/>
+            <MoreInfo {...mainDataOne} />
         </>
     )
 }

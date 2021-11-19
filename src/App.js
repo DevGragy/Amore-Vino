@@ -10,9 +10,9 @@ import Club from './pages/Club/Club';
 import Destilados from './pages/Destilados/Destilados';
 import Gourmet from './pages/Gourmet/Gourmet';
 import Ofertas from './pages/Ofertas/Ofertas'
-import Carrito from './pages/Carrito/Carrito'
 import SignUp from './pages/SignUp/SignUp';
-import SignIn from './pages/SignIn/SignIn'
+import SignIn from './pages/SignIn/SignIn';
+import Tienda from './pages/Tienda/Tienda';
 
 function App() {
   return (
@@ -28,9 +28,9 @@ function App() {
         <Route path='/accesorios' component={Accesorios}/>
         <Route path='/ofertas' component={Ofertas}/>
         <Route path='/blog' component={Blog}/>
+        <Route path='/tienda' component={Tienda}/>
         <Route path='/sign-up' component={SignUp}/>
         <Route path='/sign-in' component={SignIn}/>
-        <Route path='/carrito' component={Carrito}/>
       </Switch>
       <Footer/>
     </Router>

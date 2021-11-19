@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { FaWineGlassAlt } from 'react-icons/fa'
+import { FaWineGlassAlt, FaShoppingCart } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { Container } from '../../globalStyles'
 
@@ -39,6 +39,23 @@ export const NavIcon = styled(FaWineGlassAlt)`
     margin-right: 0.5rem;
 `
 
+export const Bubble = styled.span`
+    position: relative;
+    left: 50px;
+    bottom: 16px;
+`;
+
+export const NavIconShop = styled(FaShoppingCart)`
+    color: #fff;
+    justify-self: flex-start;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    
+`
+
 export const MobileIcon = styled.div`
     display: none;
 
@@ -76,6 +93,27 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
     height: 80px;
     border-bottom: 2px solid transparent;
+
+    &:hover {
+        border-bottom: 2px solid #D4AF37;
+    }
+
+    @media screen and (max-width: 960px) {
+        width: 100%;
+
+        &:hover {
+            border: none;
+        }
+    }
+`
+
+export const NavItemCart = styled.li`
+    height: 80px;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
 
     &:hover {
         border-bottom: 2px solid #D4AF37;

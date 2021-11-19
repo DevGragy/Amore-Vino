@@ -1,12 +1,13 @@
 import React from 'react'
 import { InfoSection, MoreInfo } from '../../components'
-import { destilados, infoData } from '../../data/Data'
+import { destilados, infoDataOne, mainDataOne, mainDataTwo } from '../../data/Data'
 
 const Destilados = () => {
     return (
         <>
             <InfoSection {...destilados}/>
-            <MoreInfo {...infoData}/>
+            <MoreInfo {...infoDataOne}/>
+            <MoreInfo {...mainDataOne} />
         </>
     )
 }

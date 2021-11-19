@@ -6,6 +6,7 @@ import neighbors from '../images/neighbors.svg'
 import wireframe from '../images/wireframe.svg'
 import copas from '../images/copas.png'
 import amore from '../images/amore.png'
+import servedWine from '../images/servedWine.png'
 
 export const clubVinos = {
     primary: true,
@@ -50,9 +51,9 @@ export const accesorios = {
     lightText: false,
     lightTextDesc: false,
     topLine: 'Accesorios',
-    headline: 'Para aquellos que quieren mas',
+    headline: '¿Algún producto es tu agrado?',
     description:
-      'Descubre nuevas experiencias con nuestra selección de vinos gourmet.',
+      'No olvides visitar nuestra tienda para comprar nuestra mejor selección de vinos.',
       buttonLabel: 'Accesorios',
       imgStart: 'imgStart',
     img: grade,
@@ -105,7 +106,7 @@ export const destilados = {
   lightTextDesc: false,
   topLine: 'Vinos Destilados',
   headline: 'Bebidas de calidad para el deguste de tu paladar',
-  description: '',
+  description: 'Atrevete a experimentar nuestros productos.',
   buttonLabel: 'Destilados',
   imgStart: 'imgStart',
   img: wireframe,
@@ -114,7 +115,7 @@ export const destilados = {
   to: '/destilados'
 };
 
-export const infoData = {
+export const infoDataOne = {
   lightBg: true,
   lightTopLine: false,
   lightText: false,
@@ -127,6 +128,35 @@ export const infoData = {
   alt: 'Vinos Destilados',
   start: 'start',
 };
+
+export const mainDataOne = {
+  lightBg: true,
+  lightTopLine: false,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Vinos y Licores',
+  headline: 'Amore Vino... los mejores vino a tu alcance',
+  description: 'En Amore Vino, estamos comprometidos con nuestros clientes, por lo que nuestros productos son elaborados con las mas altas técnicas de calidad a nivel global.',
+  imgStart: true,
+  img: servedWine,
+  alt: 'Vinos Destilados',
+  start: '',
+};
+
+export const mainDataTwo = {
+  lightBg: true,
+  lightTopLine: false,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Vinos y Licores',
+  headline: 'Amore Vino... los mejores vino a tu alcance',
+  description: 'En Amore Vino, estamos comprometidos con nuestros clientes, por lo que nuestros productos son elaborados con las mas altas técnicas de calidad a nivel global.',
+  imgStart: false,
+  img: servedWine,
+  alt: 'Vinos Destilados',
+  start: '',
+};
+
 
 export const amoreImg = {
   lightBg: true,
