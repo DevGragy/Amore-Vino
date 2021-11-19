@@ -14,11 +14,7 @@ import {
 	NavLinks,
 	NavItemBtn,
 	NavBtnLink,
-	NavIconShop,
-	NavItemCart,
-	Bubble,
 } from "./Navbar.elements";
-import BubbleAlert from "../BubbleAlert/BubbleAlert";
 
 const Navbar = () => {
 	const [click, setClick] = useState(false);
