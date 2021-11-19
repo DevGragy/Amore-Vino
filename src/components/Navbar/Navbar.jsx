@@ -147,13 +147,8 @@ const Navbar = () => {
 								</NavLinks>
 							</NavItem>
 
-							<NavItemCart>
-								<Bubble>
-									<BubbleAlert value={ 10 } />
-								</Bubble>
-								<NavIconShop/>
-							</NavItemCart>
-
+							
+							
 							<NavItemBtn>
 								{button ? (
 									<NavBtnLink to={data ? '/' : '/sign-up'}>
