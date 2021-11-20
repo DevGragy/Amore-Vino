@@ -19,7 +19,6 @@ const Shop = () => {
     ])
 
     const [cart, setCart] = useState([])
-    
 
     const addToCart = (product) => {
         if ( cart.find(x => x.name === product.name) ) {
@@ -47,7 +46,6 @@ const Shop = () => {
         setCart([ ...cart, product ])
     }
     
-
     return (
 
         <>
