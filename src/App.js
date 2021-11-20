@@ -13,6 +13,7 @@ import Ofertas from './pages/Ofertas/Ofertas'
 import SignUp from './pages/SignUp/SignUp';
 import SignIn from './pages/SignIn/SignIn';
 import Tienda from './pages/Tienda/Tienda';
+import NotFound from './pages/NotFound/NotFound'
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='/tienda' component={Tienda}/>
         <Route path='/sign-up' component={SignUp}/>
         <Route path='/sign-in' component={SignIn}/>
+        <Route path='*' component={NotFound}/>
       </Switch>
       <Footer/>
     </Router>

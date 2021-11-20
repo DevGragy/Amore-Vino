@@ -7,6 +7,7 @@ import wireframe from '../images/wireframe.svg'
 import copas from '../images/copas.png'
 import amore from '../images/amore.png'
 import servedWine from '../images/servedWine.png'
+import page404 from '../images/404.png'
 
 export const clubVinos = {
     primary: true,
@@ -164,3 +165,10 @@ export const amoreImg = {
   img: amore,
   alt: 'Amore Vino',
 };
+
+export const Img404 = {
+  lightBg: true,
+  imgStart: '',
+  img: page404,
+  alt: 'Amore Vino',
+}
