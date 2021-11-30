@@ -50,7 +50,7 @@ const Navbar = () => {
 		showButton();
 	}, []);
 
-	/*
+	
 	useEffect(() => {
 		axios
 			.get("https://smlogin.herokuapp.com/user", 
@@ -62,7 +62,7 @@ const Navbar = () => {
 				}
 			});
 	}, [setData]);
-	*/
+	
 
 	window.addEventListener("resize", showButton);
 
