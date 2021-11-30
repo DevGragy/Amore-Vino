@@ -1,15 +1,14 @@
 import React from 'react'
-import { InfoSection, Pricing, } from '../../components'
+import { InfoSection } from '../../components'
 import MainLogo from '../../components/MainLogo/MainLogo'
-import { clubVinos, vinosGourmet, accesorios, amoreImg } from '../../data/Data'
+import { accesorios, amoreImg, blog, especiales } from '../../data/Data'
 
 const Home = () => {
     return (
         <>
             <MainLogo {...amoreImg}/>
-            <InfoSection {...clubVinos} />   
-            <InfoSection {...vinosGourmet} />   
-            <Pricing/>
+            <InfoSection {...blog} />   
+            <InfoSection {...especiales} />   
             <InfoSection {...accesorios} />   
         </>
     )
