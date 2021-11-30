@@ -89,13 +89,13 @@ const Navbar = () => {
 								</NavLinks>
 							</NavItem>
 
-							<NavItem>
 								{data ?  
-								<NavLinks to="/club" onClick={closeMobileMenu}>
-								Club
-								</NavLinks>
+								<NavItem>
+									<NavLinks to="/club" onClick={closeMobileMenu}>
+									Club
+									</NavLinks>
+								</NavItem>
 								: null }
-							</NavItem>
 
 							<NavItem>
 								<NavLinks
@@ -106,16 +106,16 @@ const Navbar = () => {
 								</NavLinks>
 							</NavItem>
 
-							<NavItem>
 								{data ? 
-								<NavLinks
-								to="/gourmet"
-								onClick={closeMobileMenu}
-								>
-									Gourmet
-								</NavLinks> 
+								<NavItem>
+									<NavLinks
+									to="/gourmet"
+									onClick={closeMobileMenu}
+									>
+										Gourmet
+									</NavLinks> 
+								</NavItem>
 								: null }
-							</NavItem>
 
 							<NavItem>
 								<NavLinks
@@ -126,16 +126,16 @@ const Navbar = () => {
 								</NavLinks>
 							</NavItem>
 
-							<NavItem>
 								{data ? 
-								<NavLinks
-								to="/ofertas"
-								onClick={closeMobileMenu}
-								>
-									Ofertas
-								</NavLinks> 
+								<NavItem>
+									<NavLinks
+									to="/ofertas"
+									onClick={closeMobileMenu}
+									>
+										Ofertas
+									</NavLinks> 
+								</NavItem>
 								: null }
-							</NavItem>
 
 							<NavItem>
 								<NavLinks to="/blog" onClick={closeMobileMenu}>
