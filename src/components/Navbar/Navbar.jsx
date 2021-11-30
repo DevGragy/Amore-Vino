@@ -50,6 +50,7 @@ const Navbar = () => {
 		showButton();
 	}, []);
 
+	/*
 	useEffect(() => {
 		axios
 			.get("https://smlogin.herokuapp.com/user", 
@@ -61,6 +62,7 @@ const Navbar = () => {
 				}
 			});
 	}, [setData]);
+	*/
 
 	window.addEventListener("resize", showButton);
 
@@ -136,9 +138,10 @@ const Navbar = () => {
 							</NavItem>
 
 							<NavItem>
-								<NavLinks to="/tienda" onClick={closeMobileMenu}>
+								{data ? <NavLinks to="/tienda" onClick={closeMobileMenu}>
 									Tienda
-								</NavLinks>
+								</NavLinks> : "" }
+								
 							</NavItem>
 
 							
